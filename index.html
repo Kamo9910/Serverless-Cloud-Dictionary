@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Serverless Cloud Dictionary</title>
+</head>
+<body>
+        <div class="centered-text">
+
+        <h1>Serverless Cloud Dictionary</h1>
+        
+        <img class="myImage" src="1_jmCMehPphXUzc-fCZZ-iCQ.png" alt="Hosting a Secure Stastic Website" style="transition: transform 0.3s ease;" height="50%" width="50%">
+        
+        <h2>Project Overview:</h2>
+        <p>The Serverless Cloud Dictionary is a modern, fully serverless web application that allows users to search for the meanings of cloud computing terms (e.g., Lambda, EC2, S3, API Gateway). The system is built entirely on AWS services, ensuring high scalability, zero-maintenance, and cost-efficiency.The project integrates DynamoDB, AWS Lambda (Node.js 22.x), API Gateway (REST API), and AWS Amplify for hosting the frontend.
+         It demonstrates practical cloud development skills building APIs, querying databases, handling serverless logic, and deploying a static frontend app to the cloud.</p>
+        <h3>Architecture Overview</h3>
+        <p>1. Frontend (HTML, CSS and Javascript)-User inetrface hosted on Github and connected to AWS Amplify. <br>
+           2. Api Gateway(REST API) - Routes HTTP requets from the frontend to the backend. <br>
+           3. AWS Lambda (Node.js 22.x)- Acts as the backend logic fetching terms definnitions from DynamoDB. <br>
+           4. DynamoDB- NoSQL database storing terms and their definnitions</p>
+         <h3>Steps taken to complets this project :</h3>
+            <h4>1. Create DynamoDB Table</h4>
+            <img class="myImage" src="Screenshot (1).png" alt="DynamoDB Table" style="transition: transform 0.3s ease;" height="50%" width="50%">
+             <br>
+            <img class="myImage" src="Screenshot (2).png" alt="DynamoDB Table" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (3).png" alt="DynamoDB Table" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (4).png" alt="DynamoDB Table" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <p>- Open AWS DynamoDB Console and Create a table named CloudDictionary. <br>
+               - Set Primary Key as term(String). <br>
+               - Add sample Items.</p>
+            <br>
+            <h4>2. Create a Lambda Fuction </h4>
+            
+            <img class="myImage" src="Screenshot (5).png" alt="AWS Lambda" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (6).png" alt="AWS Lambda" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (8).png" alt="AWS Lambda" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (9).png" alt="AWS Lambda" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (10).png" alt="AWS Lambda" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <p>- Create a Lambda Fuction  <br>
+               - Set Runtime to Node.js 22.x <br>
+               - Implemented logic to fetch data from DynamoDB based on the query parameter.</p>
+            <br>
+            <h4>3. Configured Api Gateway(Rest API)</h4>
+            
+            <img class="myImage" src="Screenshot (11).png" alt="Api Gateway" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (12).png" alt="Api Gateway" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (13).png" alt="Api Gateway" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+            <p>- Create a new Rest Api in Api Gateway <br>
+               - Enable Cors to allow broswer requets <br>
+               - Deploy the Api to a new stage (prod) <br>
+               - Copied the inoke URL for frontend use</p>
+            <h4>4. Build the frontend</h4>
+            <img class="myImage" src="Screenshot (14).png" alt="Github" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (15).png" alt="Github" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <p>- index.html is for user inetrface. <br>
+              - index.js is Javascript logic for making Api requet. <br>
+              - Deploy the frontend website on Github </p>
+
+            <h4>5. Deployed Frontend Using AWS Amplify</h4>
+           <img class="myImage" src="Screenshot (16).png" alt="AWS Amplify" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (17).png" alt="AWS Amplify" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (18).png" alt="AWS Amplify" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (19).png" alt="AWS Amplify" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (20).png" alt="AWS Amplify" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (21).png" alt="AWS Amplify" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (22).png" alt="AWS Amplify" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <p>- Create a new Amplify app and connect the frontend with Github. <br>
+              - Deploy the website so that it's accessible via a public URL.</p>
+              
+            <button class="bt"><a class="fk" href="https://main.d16stibw7jk0wt.amplifyapp.com/">Cloud Dictionary</a></button>
+            </div>
+
+        <script src="javascript.js" charset="utf-8" ></script>
+
+</body>
+</html>
