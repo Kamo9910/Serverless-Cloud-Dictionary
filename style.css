@@ -29,4 +29,8 @@
   cursor: default;         
   color: whitesmoke;
   font-weight: 600;
+
 }
+.bt:hover {
+      background-color: #005fa3;
+    }
